@@ -1,0 +1,34 @@
+openapi: 3.1.0
+info:
+  title: Send Chapter to Make
+  description: Send written chapters to Make.com for editing, scoring, and publishing.
+  version: 1.0.0
+servers:
+  - url: https://hook.eu2.make.com/xqbt89a96i0g9o2qd8jkjot2faxrqk2l
+paths:
+  /:
+    post:
+      operationId: sendChapter
+      summary: Send a chapter to Make for editing
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chapterNumber:
+                  type: string
+                  description: The chapter number (e.g., "Chapter 4")
+                title:
+                  type: string
+                  description: The chapter title
+                content:
+                  type: string
+                  description: Full chapter content
+                notes:
+                  type: string
+                  description: Optional notes or summary
+      responses:
+        '200':
+          description: Successfully received
