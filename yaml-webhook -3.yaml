@@ -9,26 +9,30 @@ paths:
   /:
     post:
       operationId: sendChapter
-      summary: Send a chapter to Make for editing
+      summary: Send a complete chapter (fused from part 1 and part 2)
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
+              required:
+                - chapterNumber
+                - title
+                - content
               properties:
                 chapterNumber:
                   type: string
                   description: The chapter number (e.g., "Chapter 4")
                 title:
                   type: string
-                  description: The chapter title
+                  description: The chapter title (e.g., "The Burning Sky")
                 content:
                   type: string
-                  description: Full chapter content
+                  description: The full chapter content (fused from part 1 and part 2)
                 notes:
                   type: string
-                  description: Optional notes or summary
+                  description: Optional notes or comments (e.g., "Unedited draft")
       responses:
         '200':
-          description: Successfully received
+          description: Chapter successfully received
