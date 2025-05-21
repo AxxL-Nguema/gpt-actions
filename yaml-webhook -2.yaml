@@ -4,7 +4,7 @@ info:
   description: Send written chapters to Make.com for editing, scoring, and publishing.
   version: 1.0.0
 servers:
-  - url: https://hook.eu2.make.com/omln5xdlyaggsiwvsyr9fp9p2u9dqjra
+  - url: https://hook.eu2.make.com/9f17q80wrdqqfskkbfw5qbankexmdwo1
 paths:
   /:
     post:
